@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      font-size: 16px;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #fff;
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+      top: 0;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 20px 30px;
+      text-decoration: none;
+    }
+
+    .navbar a.active {
+      color: black;
+      font-weight: 700;
+    }
+
+    .navbar .icon {
+      display: none;
+      color: black;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .float-end a {
+      float: right;
+    }
+    /* About me */
+    .container {
+      margin-top: 80px;
+      padding: 0px 200px 0px 200px;
+    }
+    .d-flex {
+      display: flex;
+      column-gap: 50px;
+      justify-content: space-around;
+    }
+    .about-img {
+      height: 50vh;
+    }
+    .working {
+      column-gap: 10px;
+      display: flex;
+    }
+    .working img {
+      height: 3vh;
+      margin-top: 16px;
+    }
+    /* footer */
+    .footer {
+      background-color: black;
+      height: 30vh;
+      color: #fff;
+    }
+
+    .arror-img {
+      height: 2vh;
+    }
+
+    .media img {
+      height: 4vh;
+    }
+
+    .footer-pb {
+      padding: 40px 110px 0px 110px;
+    }
+
+    .media-flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .hr-tag {
+      padding: 0px 110px 0px 110px;
+    }
+    .last-part {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: 600px) {
+      .navbar a:not(.icon) {
+        display: none;
+      }
+
+      .navbar {
+        background-color: #fff;
+        overflow: hidden;
+        padding: 0px 0px;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 25px 10px;
+        text-decoration: none;
+      }
+
+      .float-end a {
+        float: left !important;
+      }
+
+      .navbar a.icon {
+        float: right;
+        display: block;
+      }
+
+      .navbar.responsive a {
+        display: block;
+        text-align: left;
+      }
+      .container {
+        margin-top: 80px;
+        padding: 0px 30px 0px 30px;
+      }
+      .d-flex {
+        display: grid;
+        column-gap: 50px;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .about-img {
+        height: 50vh;
+      }
+      .arror-img {
+        height: 1vh;
+      }
+
+      .media img {
+        text-align: center;
+        height: 4vh;
+        margin-top: 10px;
+      }
+      .footer {
+        margin-top: 50px;
+        padding: 0px 0px 20px 0px;
+      }
+      .footer-pb {
+        text-align: center;
+        padding: 50px 0px 0px 0px;
+      }
+
+      .media-flex {
+        display: grid;
+        justify-content: center;
+      }
+      .hr-tag {
+        padding: 0px 10px 0px 10px;
+      }
+      .last-part {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="navbar" id="myNavbar">
+      <a class="active" href="./index.html">femi.design</a>
+      <div class="float-end">
+        <a href="./index.html">Resume</a>
+        <a href="./about.html">About</a>
+        <a href="./work.html">Work</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+        &#9776;
+      </a>
+    </div>
+
+    <div class="container">
+      <h3>About Me</h3>
+      <div class="d-flex">
+        <div>
+          <img
+            class="about-img"
+            src="./image/0008c1ba-b6c5-4c5e-bfce-de44c75d5d59 1.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <p>
+            I’m a digital product designer, building human-centered experiences.
+            I’m currently studying Interaction design at Conestoga college.
+          </p>
+
+          <p>
+            Throughout my journey, ​I've designed products and experiences
+            across the fintech, transportation, healthcare Industries at a range
+            of companies and startups across Africa and North America .
+          </p>
+
+          <p>
+            Throughout my work, I have consistently applied the design thinking
+            methodology to create designs that meet user needs and business
+            goals.
+          </p>
+
+          <p>
+            I’m proficient with visual design software such as figma, figJam. I
+            have skills carrying out usabilty study, creating detailed user
+            flows, wireframe and protoyping.
+          </p>
+
+          <p>Thanks for stopping by !</p>
+        </div>
+      </div>
+      <b><h3>When I’m not working, what do i do? I’m glad you asked</h3></b>
+      <div>
+        <div class="working">
+          <img src="./image/man-office-worker_1f468-200d-1f4bc.png" alt="" />
+          <p>I’m an entrprenuer: I help businesses grow</p>
+        </div>
+        <div class="working">
+          <img src="./image/world-map_1f5fa-fe0f.png" alt="" />
+          <p>A travel junkie</p>
+        </div>
+        <div class="working">
+          <img src="./image/paintbrush_1f58c-fe0f.png" alt="" />
+          <p>Exploring creative mediums</p>
+        </div>
+        <div class="working">
+          <img src="./image/television_1f4fa.png" alt="" />
+          <p>Movie lover</p>
+        </div>
+        <p>Looking forward to chatting with you. Let’s talk</p>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-pb">
+        <p>
+          Thanks for stopping by, If you like what you see, let’s work together.
+          Shoot me a mail.
+        </p>
+        <div class="media-flex">
+          <b class="footer-b">femi.ogungbile@yahoo.com</b>
+          <div class="media">
+            <img src="./image/Frame 427318572.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="hr-tag">
+        <hr />
+        <div class="last-part">
+          <span style="margin-top: 5px"> © Femi 2023 </span>
+          <img
+            style="height: 2vh; margin-top: 6px"
+            src="./image/Vector.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleNavbar() {
+        var navbar = document.getElementById("myNavbar");
+        navbar.classList.toggle("responsive");
+      }
+    </script>
+  </body>
+</html>

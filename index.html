@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: monospace;
+        font-size: 16px;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: #fff;
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        top: 0;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 20px 30px;
+        text-decoration: none;
+      }
+
+      .navbar a.active {
+        color: black;
+        font-weight: 700;
+      }
+
+      .navbar .icon {
+        display: none;
+        color: black;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .float-end a {
+        float: right;
+      }
+
+      /* three phones */
+
+      .container {
+        height: 90vh;
+        margin-top: 60px;
+        padding: 50px 0px 0px 0px;
+        background-color: #eaeae7;
+      }
+
+      .container .image {
+        margin: auto;
+        width: 100%;
+      }
+
+      /* overview */
+      .Flyairpeace {
+        height: 60vh;
+        width: 80%;
+        margin: auto;
+        padding: 0px 0px 0px 150px;
+      }
+
+      .overview {
+        width: 40%;
+        margin-top: 50px;
+      }
+
+      .overview p {
+        word-spacing: 2px;
+        margin-top: 15px;
+      }
+
+      .font-size {
+        margin-bottom: 20px;
+      }
+
+      .role {
+        width: 50%;
+        margin-top: 100px;
+      }
+
+      .d-flex {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* Problem Statment */
+      .problem_statement {
+        height: 25vh;
+        background-color: #273c75;
+        color: #fff;
+      }
+
+      .w-50 {
+        width: 70%;
+        padding: 20px 0px 0px 0px;
+        margin: auto;
+      }
+
+      /* research */
+
+      .research {
+        width: 70%;
+        margin: auto;
+        margin-top: 30px;
+        font-family: monospace;
+      }
+
+      .research .text-red {
+        color: red;
+      }
+
+      .percentage-flex {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+      }
+
+      .percentage {
+        padding: 10px 8px 0px 8px;
+        height: 180px;
+        width: 180px;
+        border-radius: 100px;
+        margin-top: 20px;
+        text-align: center;
+        background-color: #f6dde0;
+        margin-bottom: 30px;
+      }
+
+      .percentage h1 {
+        font-size: 40px;
+      }
+
+      .percentage p {
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .analysis img {
+        height: 65px;
+        margin-bottom: 30px;
+      }
+
+      .solution-div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .audience {
+        border-radius: 40px;
+        padding: 10px;
+        width: 20%;
+        background-color: #f8ebed;
+      }
+
+      /* solution */
+      .solution {
+        height: 100vh;
+        margin-top: 80px;
+      }
+
+      .solution-img {
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        padding: 0px 160px 0px 160px;
+        background-color: #faf8f8;
+      }
+
+      .h3-tag {
+        color: red;
+        margin-bottom: 40px;
+      }
+
+      .img-div {
+        width: 50%;
+        height: 100vh;
+      }
+
+      .img-div img {
+        margin-top: -20px;
+        height: 80vh;
+      }
+
+      .bg-img {
+        text-align: center;
+        height: 402px;
+        position: relative;
+        width: 402px;
+        top: 50px;
+        background-color: #eceff9;
+
+        border-radius: 300px;
+      }
+
+      .bg-img1 {
+        text-align: center;
+        height: 402px;
+        position: relative;
+        width: 402px;
+        top: 50px;
+        margin-left: 100px;
+        background-color: #eceff9;
+
+        border-radius: 300px;
+      }
+
+      .text-div,
+      .viw-text {
+        width: 40%;
+        margin-top: 250px;
+      }
+
+      .d-md {
+        width: 40%;
+        margin-top: 250px;
+        display: block;
+      }
+
+      .d-sm {
+        width: 40%;
+        margin-top: 250px;
+        display: none;
+      }
+
+      /* final-design */
+
+      .final-design {
+        width: 100%;
+      }
+
+      .viw-img {
+        display: flex;
+        margin: auto;
+        padding: 0px 100px 0px 100px;
+        justify-content: space-evenly;
+      }
+
+      .final-design p,
+      h2 {
+        padding: 0px 160px 0px 160px;
+      }
+
+      .final-design h2 {
+        color: red;
+      }
+
+      .Overview {
+        width: 100%;
+        height: 60vh;
+        background-color: #f8f6f6;
+      }
+
+      .Overview h3 {
+        color: red;
+      }
+
+      .inner-overview {
+        padding: 0px 130px 0px 130px;
+      }
+
+      .get-float {
+        float: right;
+        margin-top: 20px;
+        padding: 10px;
+      }
+
+      .footer {
+        background-color: black;
+        height: 30vh;
+        color: #fff;
+      }
+
+      .arror-img {
+        height: 2vh;
+      }
+
+      .media img {
+        height: 4vh;
+      }
+
+      .footer-pb {
+        padding: 40px 110px 0px 110px;
+      }
+
+      .media-flex {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .hr-tag {
+        padding: 0px 110px 0px 110px;
+      }
+
+      .last-part {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @media screen and (max-width: 600px) {
+        .navbar a:not(.icon) {
+          display: none;
+        }
+
+        .navbar {
+          background-color: #fff;
+          overflow: hidden;
+          padding: 0px 0px;
+        }
+
+        .navbar a {
+          float: left;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 25px 10px;
+          text-decoration: none;
+        }
+
+        .float-end a {
+          float: left !important;
+        }
+
+        .navbar a.icon {
+          float: right;
+          display: block;
+        }
+
+        .navbar.responsive a {
+          display: block;
+          text-align: left;
+        }
+
+        .container {
+          height: 30vh;
+          margin-top: 60px;
+          padding: 70px 0px 0px 0px;
+          background-color: #eaeae7;
+        }
+
+        .Flyairpeace {
+          height: 80vh;
+          width: 90%;
+          margin: auto;
+          padding: 0px 0px 0px 0px;
+        }
+
+        .d-flex {
+          display: grid;
+          justify-content: space-around;
+        }
+
+        .overview {
+          width: 100%;
+        }
+
+        .role {
+          width: 100%;
+          margin-top: 20px;
+        }
+
+        .problem_statement {
+          height: 25vh;
+          background-color: #273c75;
+          margin: auto;
+          margin-top: 10px;
+          padding: 50px 0px 0px 10px;
+          color: #fff;
+        }
+
+        .w-50 {
+          width: 90%;
+          padding: 10px 0px 0px 0px;
+          margin: auto;
+        }
+
+        .research {
+          width: 90%;
+          margin: auto;
+          margin-top: 30px;
+          font-family: monospace;
+        }
+
+        .percentage-flex {
+          display: grid;
+          justify-content: center;
+          margin: auto;
+        }
+
+        .percentage {
+          height: 180px;
+          width: 180px;
+          border-radius: 100px;
+          text-align: center;
+          background-color: #f6dde0;
+          margin-top: 20px;
+        }
+
+        .percentage h1 {
+          font-size: 40px;
+        }
+
+        .percentage p {
+          font-size: 12px;
+          font-weight: 500;
+        }
+
+        .solution-div {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          margin: auto;
+          text-align: center;
+        }
+
+        .audience {
+          border-radius: 40px;
+          padding: 10px;
+          width: 84%;
+          margin-top: 10px;
+          background-color: #f8ebed;
+          margin-bottom: 30px;
+        }
+
+        .solution {
+          height: 100vh;
+          margin-top: 80px;
+          width: 100%;
+        }
+
+        .solution-img {
+          display: grid;
+          margin: auto;
+          padding: 0px 20px 0px 20px;
+          grid-template-columns: repeat(1, 1fr);
+          background-color: #f7f5f5;
+        }
+
+        .h3-tag {
+          color: red;
+          margin-bottom: 40px;
+        }
+
+        .img-div {
+          width: 100%;
+          margin-top: 0px;
+          height: 70vh;
+          text-align: center;
+        }
+
+        .img-div img {
+          height: 40vh !important;
+          margin-top: -10px;
+        }
+
+        .bg-img,
+        .bg-img1 {
+          text-align: center;
+          margin: auto;
+          height: 200px;
+          position: relative;
+          width: 200px;
+          top: 50px;
+          background-color: #eceff9;
+          border-radius: 300px;
+        }
+
+        .text-div {
+          text-align: center;
+          width: 100%;
+          margin-top: -20px;
+        }
+
+        .viw-text {
+          text-align: center;
+          width: 100%;
+          margin-top: -150px;
+        }
+
+        .d-md {
+          width: 40%;
+          margin-top: 250px;
+          display: none;
+        }
+
+        .d-sm {
+          text-align: center;
+          width: 100%;
+          margin-top: -150px;
+          display: block;
+        }
+
+        .final-design p,
+        h2 {
+          padding: 0px 14px 0px 14px;
+        }
+
+        .viw-img img {
+          width: 100%;
+          height: 30vh;
+          padding: 0px 0px 0px 0px;
+        }
+
+        .Overview {
+          height: 75vh;
+          background-color: #f8f6f6;
+        }
+
+        .inner-overview {
+          padding: 0px 15px 0px 15px;
+        }
+
+        .get-float {
+          font-weight: 8h00;
+        }
+
+        .arror-img {
+          height: 1vh;
+        }
+
+        .media img {
+          text-align: center;
+          height: 4vh;
+          margin-top: 10px;
+        }
+
+        .footer {
+          padding: 0px 0px 20px 0px;
+        }
+
+        .footer-pb {
+          text-align: center;
+          padding: 50px 0px 0px 0px;
+        }
+
+        .media-flex {
+          display: grid;
+          justify-content: center;
+        }
+
+        .hr-tag {
+          padding: 0px 10px 0px 10px;
+        }
+
+        .last-part {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar" id="myNavbar">
+      <a class="active" href="./index.html">femi.design</a>
+      <div class="float-end">
+        <a href="./index.html">Resume</a>
+        <a href="./about.html">About</a>
+        <a href="./work.html">Work</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+        &#9776;
+      </a>
+    </div>
+    <div class="container">
+      <div>
+        <img class="image" src="./image/Group 289441.png" alt="" />
+      </div>
+    </div>
+    <div class="Flyairpeace">
+      <div class="d-flex">
+        <div class="overview">
+          <b>Flyairpeace</b>
+          <div class="font-size">Mobile application</div>
+          <b>Overview </b>
+          <p>
+            I believe that improving the search and booking process for people
+            who will travel, will improve their understanding of using the
+            booking app for booking flights.
+          </p>
+
+          <p>
+            Therefore users are more likely to finish the booking process which
+            will reduce the number of cart abandonments for the booking app.
+          </p>
+        </div>
+        <div class="role">
+          <b>Role</b>
+
+          <p>UX Research, Interaction design UI Design</p>
+          <b>Duration </b>
+          <p>May 2019- Sept 2020</p>
+          <b>Team </b>
+          <p>2 UX /UI designers, 2 Developers, 1 QA,</p>
+        </div>
+      </div>
+    </div>
+    <div class="problem_statement">
+      <div class="w-50">
+        <b> Problem Statement </b>
+        <p>
+          A lack of system to make flight reservations from the comfort of
+          encourage easy and seamless purchase of air tickets by air travellers
+          and improve users experience navigating through?
+        </p>
+      </div>
+    </div>
+    <div class="research">
+      <b class="text-red">User Research</b>
+      <p class="text-red">Exploring user pain points</p>
+      <p>
+        Because we wanted to get insights and form a solution from a real-time
+        problem and not a preconceived data, we decided to interview individuals
+        who are frequent air travellers, some of which were customers of the
+        airline.
+      </p>
+      <p>
+        “What is your <b> number one frustration </b>, when booking for a flight
+        ticket?"
+      </p>
+      <div class="percentage-flex">
+        <div class="percentage">
+          <h1>
+            79%
+            <p>
+              Being able to book/purchase a flight ticket weeks before the
+              departure date
+            </p>
+          </h1>
+        </div>
+        <div class="percentage">
+          <h1>
+            84%
+            <p>Being able to check-in even before getting to the airport</p>
+          </h1>
+        </div>
+        <div class="percentage">
+          <h1>
+            90%
+            <p>Multiple online payment options</p>
+          </h1>
+        </div>
+        <div class="percentage">
+          <h1>
+            41%
+            <p>Getting discount/cheap flights</p>
+          </h1>
+        </div>
+      </div>
+      <div class="analysis">
+        <b class="text-red">Initial competitive analysis</b>
+        <p>
+          We looked into the market to examine other airlines, carried out a
+          deep analysis of functional competitors and industry leaders in order
+          to extract important features, practices and strategies.
+        </p>
+        <div>
+          <img src="./image/aero 1.png" alt="" />
+          <img src="./image/dana air logo 1.png" alt="" />
+          <img src="./image/Arik-Logo 1.png" alt="" />
+        </div>
+        <p>
+          We thought to pull from other working applications and thier already
+          exisitng features . The purpose of this analysis was to get a better
+          understanding and check out the what already worked for these other
+          airlines in order to save us from re-designig from scratch. so i
+          pulled insights from the top (3) three domestic airlines in Nigeria
+          which are Arik, Dana and Aero contractors.
+        </p>
+        <p class="text-red"><b>Focusing on my target audience</b></p>
+        <b
+          >M/F , Age 18-60, Students and working class who have full time
+          jobs.</b
+        >
+        <p>
+          This will give us extra information about what and how to create a
+          suitable solution..
+        </p>
+
+        <div class="solution-div">
+          <div class="audience">Gen-z</div>
+          <div class="audience">Working class</div>
+          <div class="audience">Students</div>
+          <div class="audience">Millenials</div>
+        </div>
+
+        <b class="text-red">Validating Product ideas with User Testing</b>
+        <p>
+          We led a few moderated usability tests focusing on air travellers that
+          frequently booked their own flights on a travel site. We tried to find
+          out how users responded to the application.
+        </p>
+        <p>
+          1.) We used Zoom and Google meet to conduct remote usability tests,
+          due to long distances it was not possible to conduct face to face
+          usability testing.
+        </p>
+        <p>
+          2.) The users were people that frequently booked their own flights on
+          a travel site
+        </p>
+        <p>
+          3.) We presented the mobile app design and gave them a set of
+          pre-defined tasks including to book a return flight from Lagos to Cape
+          any destination of thier choice for 2 adults for 7 days.
+        </p>
+      </div>
+    </div>
+
+    <div class="solution">
+      <div class="solution-img">
+        <div class="img-div">
+          <h2 class="h3-tag"><b>Solution</b></h2>
+          <div class="bg-img">
+            <img src="./image/AA  1.png" alt="" />
+          </div>
+        </div>
+        <div class="text-div">
+          <b>
+            <h3>A ready to use app, all accessible from your mobile phone.</h3>
+          </b>
+          <p>
+            Whether a user wants to Book a Flight, view Flight Status, Check in
+            or Manage Bookings.
+          </p>
+        </div>
+      </div>
+
+      <div class="solution-img">
+        <div class="d-md">
+          <b>
+            <h3>List of departure and destination city .</h3>
+          </b>
+          <p>
+            Filtered and detailed for users of the app to choose from what city
+            of departure to what city of arrival they are going.
+          </p>
+        </div>
+        <div class="img-div">
+          <div class="bg-img1">
+            <img src="image\AE  1.png" alt="" />
+          </div>
+        </div>
+        <div class="d-sm">
+          <b>
+            <h3>List of departure and destination city .</h3>
+          </b>
+          <p>
+            Filtered and detailed for users of the app to choose from what city
+            of departure to what city of arrival they are going.
+          </p>
+        </div>
+      </div>
+
+      <div class="solution-img">
+        <div class="img-div">
+          <div class="bg-img">
+            <img src="./image/AB  1.png" alt="" />
+          </div>
+        </div>
+        <div class="viw-text">
+          <b>
+            <h3>View Upcoming Trip</h3>
+          </b>
+          <p>
+            Air Travellers can view details of their next trip. from the date to
+            the time and also the flight number.
+          </p>
+        </div>
+      </div>
+      <div class="final-design">
+        <h2>Final Designs</h2>
+        <p>
+          After usability testing, I gathered all the feedbacks and came up with
+          high fidelity designs.
+        </p>
+        <div class="viw-img">
+          <img src="./image/AG 1.png" alt="" />
+          <img src="./image/AV.png" alt="" />
+          <img src="./image/AN  1.png" alt="" />
+        </div>
+        <div style="margin-top: 60px" class="viw-img">
+          <img src="./image/FJ.png" alt="" />
+          <img src="./image/DB 1.png" alt="" />
+          <img src="./image/SN (1).png" alt="" />
+        </div>
+      </div>
+
+      <div class="Overview">
+        <div class="inner-overview">
+          <h3 class="h3-overview">Overview</h3>
+          <b>1.) Working on cross functional teams</b>
+          <p>
+            Working on this project was my first experience collaborating with
+            Product Managers and Software Engineers in a cross-functional
+            setting. This experience exposed me to what it’s like to tackle my
+            role as a Product Designer while also putting myself in the shoes of
+            Product Managers and Software Engineers. For example, many of my
+            initial iterations included designs that would make intricate
+            programs that would be difficult for engineers to develop. While I
+            didn’t understand these issues at first, Engineers and Product
+            Managers helped me better understand why certain designs wouldn’t be
+            feasible.
+          </p>
+          <b>2.) Time management/Prioritizing </b>
+          <p>
+            I learned how important it is to pick your battles when it comes to
+            designing a product. During the ideation period, we came up with a
+            variety of ideas to solve the problems we found in our research.
+            Unfortunately, we didn’t have enough time to design every idea with
+            the 48 hours we had. This situation helped me understand how to
+            prioritize the most important aspects of a design.
+          </p>
+        </div>
+        <div class="get-float">
+          Esquity
+          <span
+            ><img
+              class="arror-img"
+              src="./image/right-arrow-forward-motion-simple-black-direction-pointer_53562-14529.avif"
+              alt=""
+          /></span>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-pb">
+          <p>
+            Thanks for stopping by, If you like what you see, let’s work
+            together. Shoot me a mail.
+          </p>
+          <div class="media-flex">
+            <b class="footer-b">femi.ogungbile@yahoo.com</b>
+            <div class="media">
+              <img src="./image/Frame 427318572.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="hr-tag">
+          <hr />
+          <div class="last-part">
+            <span style="margin-top: 5px"> © Femi 2023 </span>
+            <img
+              style="height: 2vh; margin-top: 6px"
+              src="./image/Vector.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleNavbar() {
+        var navbar = document.getElementById("myNavbar");
+        navbar.classList.toggle("responsive");
+      }
+    </script>
+  </body>
+</html>
